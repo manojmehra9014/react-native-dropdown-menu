@@ -29,8 +29,9 @@ export const styles = StyleSheet.create({
   },
   dropdown: {
     flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    width: '108%',
+    marginLeft: -10,
+    padding: 17,
   },
   title: {
     marginVertical: 5,
@@ -64,4 +65,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  emptyStateContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 20,
+  },
+  noItemsText: {
+    color: 'gray',
+    fontSize: 16,
+  }
 });
