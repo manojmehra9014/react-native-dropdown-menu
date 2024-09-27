@@ -1,5 +1,5 @@
 {
-  "name": "react-native-element-dropdown",
+  "name": "react-native-dropdown-menu",
   "version": "2.12.1",
   "description": "React Native Element Dropdown is a library that provides a customizable dropdown component for React Native applications.",
   "main": "lib/commonjs/index",
@@ -49,13 +49,13 @@
     "select",
     "select country"
   ],
-  "repository": "https://github.com/hoaphantn7604/react-native-element-dropdown",
+  "repository": "https://github.com/hoaphantn7604/react-native-dropdown-menu",
   "author": "Hoa Phan <hoaphantn7604@gmail.com> (https://github.com/hoaphantn7604)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hoaphantn7604/react-native-element-dropdown/issues"
+    "url": "https://github.com/hoaphantn7604/react-native-dropdown-menu/issues"
   },
-  "homepage": "https://github.com/hoaphantn7604/react-native-element-dropdown#readme",
+  "homepage": "https://github.com/hoaphantn7604/react-native-dropdown-menu#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

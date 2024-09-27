@@ -6,7 +6,7 @@ import {
   RefreshControl,
   ActivityIndicator,
 } from 'react-native';
-import { Dropdown } from 'react-native-element-dropdown';
+import { Dropdown } from 'react-native-dropdown-menu';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 const RenderEmpty = () => {
