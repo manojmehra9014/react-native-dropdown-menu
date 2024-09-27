@@ -30,7 +30,9 @@ export const styles = StyleSheet.create({
   dropdown: {
     flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    width: '108%',
+    marginLeft: -10,
+    padding: 17,
   },
   dropdownInside: {
     flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
