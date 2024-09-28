@@ -1,6 +1,6 @@
 import React, { RefObject, useRef, useState } from 'react';
 import { StyleSheet, View, Text, Alert } from 'react-native';
-import { Dropdown } from 'react-native-dropdown-menu';
+import { Dropdown } from 'react-native-pick-menu';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 const data = [
@@ -52,7 +52,7 @@ const DropdownComponent = () => {
         Alert.alert('Confirm', 'Message confirm', [
           {
             text: 'Cancel',
-            onPress: () => { },
+            onPress: () => {},
           },
           {
             text: 'Confirm',

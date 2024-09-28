@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Dropdown } from 'react-native-dropdown-menu';
+import { Dropdown } from 'react-native-pick-menu';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 const data = [

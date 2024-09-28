@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { MultiSelect } from 'react-native-dropdown-menu';
+import { MultiSelect } from 'react-native-pick-menu';
 
 const data = [
   { label: 'Item 1', value: '1' },

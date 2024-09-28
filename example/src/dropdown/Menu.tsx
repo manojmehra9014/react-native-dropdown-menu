@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { StyleSheet, Dimensions, View } from 'react-native';
-import { Dropdown, IDropdownRef } from 'react-native-dropdown-menu';
+import { Dropdown, IDropdownRef } from 'react-native-pick-menu';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 const data = [
@@ -42,7 +42,7 @@ const DropdownComponent = () => {
       onChange={(item) => {
         setValue(item.value);
       }}
-      onChangeText={() => { }} // Keep search keyword
+      onChangeText={() => {}} // Keep search keyword
       renderRightIcon={renderIcon}
     />
   );

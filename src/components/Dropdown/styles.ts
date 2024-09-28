@@ -73,5 +73,5 @@ export const styles = StyleSheet.create({
   noItemsText: {
     color: 'gray',
     fontSize: 16,
-  }
+  },
 });
