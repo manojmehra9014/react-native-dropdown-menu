@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Button, StyleSheet, View } from 'react-native';
-import { Dropdown, IDropdownRef } from 'react-native-dropdown-menu';
+import { Dropdown, IDropdownRef } from 'react-native-pick-menu';
 
 const data = [
   { label: 'Item 1', value: '1' },
@@ -38,7 +38,7 @@ const DropdownComponent = () => {
         onChange={(item) => {
           setValue(item.value);
         }}
-        onChangeText={() => { }} // Keep search keyword
+        onChangeText={() => {}} // Keep search keyword
       />
       <View style={styles.button}>
         <Button

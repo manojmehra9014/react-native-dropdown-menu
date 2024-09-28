@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-dropdown-menu": [
+      "react-native-pick-menu": [
         "./src/index"
       ]
     },

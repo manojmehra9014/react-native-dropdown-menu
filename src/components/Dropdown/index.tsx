@@ -583,61 +583,58 @@ const DropdownComponent: <T>(
       searchText,
     ]);
 
-    const _renderList = useCallback(
-      () => {
-        const isTopPosition = dropdownPosition === 'top'; 
-        const isInverted = false; 
-    
-        const _renderListHelper = () => {
-          if (listData && listData.length === 0) {
-            // Handle empty search result
-            return (
-              <View style={styles.emptyStateContainer}>
-                <Text style={styles.noItemsText}>No records found</Text>
-              </View>
-            );
-          }
-    
+    const _renderList = useCallback(() => {
+      const isTopPosition = dropdownPosition === 'top';
+      const isInverted = false;
+
+      const _renderListHelper = () => {
+        if (listData && listData.length === 0) {
+          // Handle empty search result
           return (
-            <FlatList
-              testID={testID + ' flatlist'}
-              accessibilityLabel={accessibilityLabel + ' flatlist'}
-              {...flatListProps}
-              keyboardShouldPersistTaps="handled"
-              ref={refList}
-              onScrollToIndexFailed={scrollIndex}
-              data={listData}
-              inverted={isInverted} // Control inversion based on dropdownPosition
-              renderItem={_renderItem}
-              keyExtractor={(_item, index) => index.toString()}
-              showsVerticalScrollIndicator={showsVerticalScrollIndicator}
-            />
-          );
-        };
-    
-        return (
-          <TouchableWithoutFeedback>
-            <View style={styles.flexShrink}>
-              {isInverted && _renderListHelper()}
-              {renderSearch()}
-              {!isInverted && _renderListHelper()}
+            <View style={styles.emptyStateContainer}>
+              <Text style={styles.noItemsText}>No records found</Text>
             </View>
-          </TouchableWithoutFeedback>
+          );
+        }
+
+        return (
+          <FlatList
+            testID={testID + ' flatlist'}
+            accessibilityLabel={accessibilityLabel + ' flatlist'}
+            {...flatListProps}
+            keyboardShouldPersistTaps="handled"
+            ref={refList}
+            onScrollToIndexFailed={scrollIndex}
+            data={listData}
+            inverted={isInverted} // Control inversion based on dropdownPosition
+            renderItem={_renderItem}
+            keyExtractor={(_item, index) => index.toString()}
+            showsVerticalScrollIndicator={showsVerticalScrollIndicator}
+          />
         );
-      },
-      [
-        dropdownPosition,
-        _renderItem,
-        accessibilityLabel,
-        flatListProps,
-        listData,
-        inverted,
-        renderSearch,
-        scrollIndex,
-        showsVerticalScrollIndicator,
-        testID,
-      ]
-    );
+      };
+
+      return (
+        <TouchableWithoutFeedback>
+          <View style={styles.flexShrink}>
+            {isTopPosition && _renderListHelper()}
+            {renderSearch()}
+            {!isTopPosition && _renderListHelper()}
+          </View>
+        </TouchableWithoutFeedback>
+      );
+    }, [
+      dropdownPosition,
+      _renderItem,
+      accessibilityLabel,
+      flatListProps,
+      listData,
+      inverted,
+      renderSearch,
+      scrollIndex,
+      showsVerticalScrollIndicator,
+      testID,
+    ]);
 
     const _renderModal = useCallback(() => {
       if (visible && position) {
@@ -697,9 +694,9 @@ const DropdownComponent: <T>(
                       !isTopPosition
                         ? { paddingTop: extendHeight }
                         : {
-                          justifyContent: 'flex-end',
-                          paddingBottom: extendHeight,
-                        },
+                            justifyContent: 'flex-end',
+                            paddingBottom: extendHeight,
+                          },
                       isFull && styles.fullScreen,
                     ])}
                   >
@@ -713,7 +710,7 @@ const DropdownComponent: <T>(
                         containerStyle,
                       ])}
                     >
-                      {_renderList(isTopPosition)}
+                      {_renderList()}
                     </View>
                   </View>
                 </View>
