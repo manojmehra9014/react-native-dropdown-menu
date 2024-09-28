@@ -75,7 +75,6 @@ const DropdownComponent: <T>(
       minHeight = 0,
       disable = false,
       keyboardAvoiding = true,
-      inverted = true,
       renderLeftIcon,
       renderRightIcon,
       renderItem,
@@ -585,7 +584,6 @@ const DropdownComponent: <T>(
 
     const _renderList = useCallback(() => {
       const isTopPosition = dropdownPosition === 'top';
-      const isInverted = false;
 
       const _renderListHelper = () => {
         if (listData && listData.length === 0) {
@@ -606,7 +604,6 @@ const DropdownComponent: <T>(
             ref={refList}
             onScrollToIndexFailed={scrollIndex}
             data={listData}
-            inverted={isInverted} // Control inversion based on dropdownPosition
             renderItem={_renderItem}
             keyExtractor={(_item, index) => index.toString()}
             showsVerticalScrollIndicator={showsVerticalScrollIndicator}
@@ -629,7 +626,6 @@ const DropdownComponent: <T>(
       accessibilityLabel,
       flatListProps,
       listData,
-      inverted,
       renderSearch,
       scrollIndex,
       showsVerticalScrollIndicator,
