@@ -1,8 +1,9 @@
 {
   "name": "react-native-pick-menu",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "React Native Pick Menu is a library that provides a customizable dropdown component for React Native applications.",
   "main": "lib/commonjs/index",
+  "readme": "README.md",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
   "react-native": "src/index",
